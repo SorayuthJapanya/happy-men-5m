@@ -17,30 +17,30 @@ const CalendarPage = () => {
     const updateDuration = () => {
       const now = new Date();
 
-      // Calculate years
       let years = now.getFullYear() - startDate.getFullYear();
       let months = now.getMonth() - startDate.getMonth();
+      let days = now.getDate() - startDate.getDate();
 
-      // Adjust for month difference
+      if (days < 0) {
+        // ยืมวันจากเดือนก่อนหน้า
+        months--;
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0); // วันสุดท้ายของเดือนก่อน
+        days += prevMonth.getDate();
+      }
+
       if (months < 0) {
         years--;
         months += 12;
       }
 
-      // Calculate days by creating a temporary date
-      const tempDate = new Date(startDate);
-      tempDate.setFullYear(startDate.getFullYear() + years);
-      tempDate.setMonth(startDate.getMonth() + months);
-
-      const daysDiff = Math.floor((now - tempDate) / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((now - tempDate) / (1000 * 60 * 60)) % 24;
-      const minutes = Math.floor((now - tempDate) / (1000 * 60)) % 60;
-      const seconds = Math.floor((now - tempDate) / 1000) % 60;
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
 
       setDuration({
         years,
         months,
-        days: daysDiff,
+        days,
         hours,
         minutes,
         seconds,
@@ -49,7 +49,6 @@ const CalendarPage = () => {
 
     updateDuration();
     const interval = setInterval(updateDuration, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
