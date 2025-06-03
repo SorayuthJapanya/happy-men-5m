@@ -58,7 +58,7 @@ const MemerizePage = () => {
             <div
               key={love.id}
               onClick={() => handlePath(love.path)}
-              className="flex flex-col items-center justify-center space-y-2 p-6 md:p-10 bg-white rounded-xl transition-all duration-300 hover:scale-105 shadow-pink-300 shadow-lg h-full cursor-pointer"
+              className="flex flex-col items-center justify-center space-y-2 p-6 md:p-10 bg-white rounded-xl transition-all duration-300 hover:scale-105 shadow-pink-300 shadow-lg h-full cursor-pointer w-full max-w-2xs sm:max-w-md md:max-w-xl mx-auto"
             >
               <div className="size-22 mb-4 p-4 bg-red-200 rounded-full">
                 <img

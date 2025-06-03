@@ -19,13 +19,13 @@ const DragImageSlider = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full  lg:w-2/3 h-[90vh] mt-8 rounded-xl shadow-lg">
+    <div className="relative w-full md:w-2/3 lg:4/5 h-[58vh] sm:h-[62vh] mt-8 rounded-xl flex flex-col items-center justify-center">
       <motion.div
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         onDragStart={() => setIsDragging(true)}
         onDragEnd={handleDragEnd}
-        className="w-full h-full relative"
+        className="w-full max-w-2xs sm:max-w-lg md:max-w-xl lg:max-w-2xl h-full relative"
       >
         {/* Current Image */}
         <div className="absolute inset-0 w-full h-full ">

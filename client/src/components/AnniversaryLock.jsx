@@ -36,7 +36,7 @@ const AnniversaryLock = ({ onUnlock }) => {
 
   return (
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-      <div className="w-xs md:w-md lg:w-md rounded-xl bg-white p-6 md:p-8 lg-10 shadow-xl text-center flex flex-col gap-2 lg:gap-4">
+      <div className="w-3xs sm:w-xs md:w-md lg:w-md rounded-xl bg-white p-6 md:p-8 lg-10 shadow-xl text-center flex flex-col gap-2 lg:gap-4">
         <div className="space-y-2 md:space-y-4">
           <h1 className="text-5xl sm:text-6xl md:text-7xl">💖</h1>
           <h3 className="font-thirdary font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700">
@@ -59,7 +59,7 @@ const AnniversaryLock = ({ onUnlock }) => {
               value={val}
               onChange={(e) => handleChange(e, i)}
               onKeyDown={(e) => handleKeyDown(e, i)}
-              className="w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-center border border-gray-300 rounded-md text-lg sm:text-lg md:text-xl lg:text-2xl focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-center border border-gray-300 rounded-md text-lg sm:text-lg md:text-xl lg:text-2xl focus:outline-none focus:ring-2 focus:ring-pink-400 transition-all"
             />
           ))}
         </div>

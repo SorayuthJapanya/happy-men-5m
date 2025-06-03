@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import puzzleImage from "../../assets/treecafe.jpg";
@@ -43,7 +43,7 @@ const PuzzlePage = () => {
         </div>
       )}
 
-      <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-7xl mx-auto my-6 px-4">
+      <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-7xl mx-auto my-16 sm:my-8 px-4">
         <div>
           <button
             onClick={() => history.back()}
@@ -61,9 +61,12 @@ const PuzzlePage = () => {
 
         {/* Puzzle Game */}
         <div className="flex justify-center w-full">
-          <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full md:max-w-lg lg:max-w-3xl mx-auto ">
             {/* Puzzle Component */}
-            <div className="bg-white p-4 rounded-xl shadow-lg border border-pink-200 w-100">
+            <div className="bg-white p-4 rounded-xl shadow-lg border border-pink-200 text-center w-full mx-auto h-auto">
+              <h3 className="font-secondary text-pink-700 text-lg mb-2">
+                Puzzle Game
+              </h3>
               <JigsawPuzzle
                 imageSrc={puzzleImage}
                 rows={3}
@@ -74,14 +77,14 @@ const PuzzlePage = () => {
             </div>
 
             {/* Right Side Preview */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-pink-200 flex flex-col items-center w-100">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-pink-200 flex flex-col items-center w-full md:max-w-lg lg:max-w-3xl mx-auto h-auto">
               <h3 className="font-secondary text-pink-700 text-lg mb-4">
-                ตัวอย่างภาพ
+                Example Puzzle Image
               </h3>
               <img
                 src={puzzleImage}
                 alt="Preview"
-                className="w-full max-w-xs rounded-lg border-2 border-pink-300 shadow-md"
+                className="w-full max-w-xs h-full rounded-lg border-2 border-pink-300 shadow-md"
               />
             </div>
           </div>
@@ -92,12 +95,18 @@ const PuzzlePage = () => {
       <style jsx global>{`
         .jigsaw-puzzle {
           width: 100%;
-          height: 400px;
+          max-width: 300px;
           margin: 0 auto;
+        }
+        @media (min-width: 1024px) {
+          .jigsaw-puzzle {
+            max-width: 400px;
+          }
         }
         .jigsaw-puzzle > div {
           background-color: #fce4ec;
           border: 2px solid #f8bbd0;
+          touch-action: none;
         }
         .jigsaw-puzzle > div:hover {
           background-color: #f8bbd0;

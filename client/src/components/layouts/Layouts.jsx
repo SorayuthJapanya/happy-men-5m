@@ -35,7 +35,7 @@ const Layouts = () => {
   }, [volume]);
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden">
+    <div className="w-full min-h-screen relative overflow-hidden">  
       <HomePageVideoBg />
 
       <audio ref={audioRef} loop muted>
@@ -43,7 +43,7 @@ const Layouts = () => {
       </audio>
 
       {/* 🔊 Volume Control */}
-      <div className="group fixed top-4 right-4 bg-white/90 backdrop-blur-md border border-gray-300 p-3 rounded-xl shadow-md flex items-center space-x-2 z-50">
+      <div className="group fixed top-4 right-4 bg-white/90 backdrop-blur-md border border-gray-300 p-2 sm:p-3 rounded-xl shadow-md flex items-center space-x-2 z-50">
         <label
           htmlFor="volume"
           onClick={toggleMute}
@@ -58,7 +58,7 @@ const Layouts = () => {
           max="100"
           value={volume}
           onChange={(e) => setVolume(Number(e.target.value))}
-          className="w- sm:w-32 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          className="w-16 sm:w-32 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
         />
         <span className="text-sm text-gray-500 w-8 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {volume}%

@@ -16,7 +16,7 @@ const LetterPage = () => {
     <div className="relative w-full min-h-screen bg-white/30 flex flex-col items-center justify-center p-4">
       <button
         onClick={() => history.back()}
-        className="absolute top-10 left-10 font-thirdary flex gap-3 items-center justify-center px-4 text-pink-600 py-2 bg-white rounded-lg shadow-xl cursor-pointer hover:text-white hover:bg-pink-600 transition-all ease-in-out hover:scale-105"
+        className="absolute top-16 sm:top-8 left-2 font-thirdary flex gap-3 items-center justify-center px-4 text-pink-600 py-2 bg-white rounded-lg shadow-xl cursor-pointer hover:text-white hover:bg-pink-600 transition-all ease-in-out hover:scale-105"
       >
         <p>&#8249;</p> Back
       </button>
@@ -25,10 +25,10 @@ const LetterPage = () => {
         // Closed Envelope
         <div
           onClick={handleOpenLetter}
-          className="relative w-64 h-48 md:w-96 md:h-64 bg-pink-400 cursor-pointer transform hover:scale-105 transition-transform duration-300 "
+          className="relative w-48 h-36 sm:w-64 sm:h-48 md:w-96 md:h-64 lg:w-112 lg:h-80 bg-pink-400 cursor-pointer transform hover:scale-105 transition-transform duration-300 "
         >
           <div className="absolute top-0 left-0 w-full h-full bg-pink-500 clip-envelope-front z-10"></div>
-          <p className="absolute left-29 top-19 md:top-27 md:left-45 text-xl z-100 ">❤</p>
+          <p className="absolute top-13 left-20 sm:left-29 sm:top-19 md:top-27 md:left-45 lg:top-32 lg:left-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl z-100 ">❤</p>
         </div>
       ) : (
         // Opened Letter with Animation
@@ -64,7 +64,7 @@ const LetterPage = () => {
                 <div className="flex justify-end text-lg mt-4">
                   ด้วยรักและคิดถึง จาก ยูโร
                 </div>
-                <div className="flex justify-center mt-6 nmb-2 text-4xl">
+                <div className="flex justify-center mt-6 mb-2 text-4xl">
                   💖
                 </div>
               </div>

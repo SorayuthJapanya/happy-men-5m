@@ -54,7 +54,7 @@ const CalendarPage = () => {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden ">
-      <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto my-6 px-4">
+      <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto my-16 sm:my-6 px-4">
         <div>
           <button
             onClick={() => history.back()}
@@ -64,11 +64,11 @@ const CalendarPage = () => {
           </button>
         </div>
 
-        <div className="mt-4 space-y-4 text-center">
-          <h1 className="font-thirdary font-semibold text-pink-800 text-3xl md:text-4xl lg:text-5xl">
+        <div className="mt-4 space-y-2 text-center">
+          <h1 className="font-thirdary font-semibold text-pink-800 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Our Love Journey
           </h1>
-          <p className="font-secondary text-pink-700 text-base md:text-lg">
+          <p className="font-secondary text-pink-700 text-sm sm:text-base md:text-lg">
             เราคบกันนานแค่ไหนแล้วน๊าาาาาา ?
           </p>
           <p className="text-3xl">❤️</p>
@@ -83,51 +83,51 @@ const CalendarPage = () => {
         </div>
 
         {/* Duration Counter */}
-        <div className="mt-8 w-full md:w-2/3 mx-auto text-center bg-white rounded-lg shadow-md p-6">
-          <div className="flex justify-center items-center space-x-2">
+        <div className="mt-4 w-5/5 md:w-2/3 mx-auto text-center bg-white rounded-lg shadow-md p-2 sm:p-4">
+          <div className="flex justify-center items-center space-x-1 sm:space-x-2">
             <div className="text-center">
-              <span className="text-4xl font-bold text-pink-600">
+              <span className="text-2xl sm:text-4xl font-bold text-pink-600">
                 {duration.years}
               </span>
-              <p className="text-pink-700 text-sm">ปี</p>
+              <p className="text-pink-700 text-sm">Y</p>
             </div>
-            <span className="text-4xl text-pink-400">:</span>
+            <span className="text-2xl sm:text-4xl text-pink-400">:</span>
             <div className="text-center">
-              <span className="text-4xl font-bold text-pink-600">
+              <span className="text-2xl sm:text-4xl font-bold text-pink-600">
                 {duration.months}
               </span>
-              <p className="text-pink-700 text-sm">เดือน</p>
+              <p className="text-pink-700 text-sm">M</p>
             </div>
-            <span className="text-4xl text-pink-400">:</span>
+            <span className="text-2xl sm:text-4xl text-pink-400">:</span>
             <div className="text-center">
-              <span className="text-4xl font-bold text-pink-600">
+              <span className="text-2xl sm:text-4xl font-bold text-pink-600">
                 {duration.days}
               </span>
-              <p className="text-pink-700 text-sm">วัน</p>
+              <p className="text-pink-700 text-sm">D</p>
             </div>
-            <span className="text-4xl text-pink-400">:</span>
+            <span className="text-2xl sm:text-4xl text-pink-400">:</span>
             <div className="text-center">
-              <span className="text-4xl font-bold text-pink-600">
+              <span className="text-2xl sm:text-4xl font-bold text-pink-600">
                 {duration.hours}
               </span>
-              <p className="text-pink-700 text-sm">ชม.</p>
+              <p className="text-pink-700 text-sm">H</p>
             </div>
-            <span className="text-4xl text-pink-400">:</span>
+            <span className="text-2xl sm:text-4xl text-pink-400">:</span>
             <div className="text-center">
-              <span className="text-4xl font-bold text-pink-600">
+              <span className="text-2xl sm:text-4xl font-bold text-pink-600">
                 {duration.minutes}
               </span>
-              <p className="text-pink-700 text-sm">นาที</p>
+              <p className="text-pink-700 text-sm">MIN</p>
             </div>
-            <span className="text-4xl text-pink-400">:</span>
+            <span className="text-2xl sm:text-4xl text-pink-400">:</span>
             <div className="text-center">
-              <span className="text-4xl font-bold text-pink-600">
+              <span className="text-2xl sm:text-4xl font-bold text-pink-600">
                 {duration.seconds}
               </span>
-              <p className="text-pink-700 text-sm">วินาที</p>
+              <p className="text-pink-700 text-sm">SEC</p>
             </div>
           </div>
-          <p className="mt-6 text-pink-600 text-lg">
+          <p className="hidden sm:block mt-6 text-pink-600 text-lg">
             💖 Since 25 December 2024 💖
           </p>
         </div>

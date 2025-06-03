@@ -58,13 +58,13 @@ const MemeriesPicPage = () => {
             <p>&#8249;</p> Back
           </button>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4">
           <DragImageSlider images={images} />
         </div>
-        <div className="mt-12 lg:mt-15 w-full lg:w-2/3 mx-auto bg-white rounded-lg shadow-md flex flex-col gap-2 items-center justify-center p-6 relative">
-          <h2 className="font-thirdary font-semibold text-xl text-gray-800">Best Moment with You na Babe</h2>
-          <p className="font-thirdary text-base text-gray-500">You'er My Everthing na ngub</p>
-          <p className="absolute right-0 bottom-0 text-5xl">💐</p>
+        <div className="w-full max-w-2xs sm:max-w-lg md:max-w-xl lg:max-w-2xl mt-6  mx-auto bg-white rounded-lg shadow-md flex flex-col gap-2 items-center justify-center p-6 relative">
+          <h2 className="font-thirdary font-semibold text-sm sm:text-lg lg:text-xl text-gray-800">Best Moment with You na Babe</h2>
+          <p className="font-thirdary text-xs sm:text-base lg:text-lg text-gray-500">You'er My Everthing na ngub</p>
+          <p className="absolute right-0 bottom-2 text-4xl sm:text-5xl">💐</p>
         </div>
       </div>
     </div>
