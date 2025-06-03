@@ -8,7 +8,7 @@ const unlockHeartRoutes = require("./routes/unlockHeartRoutes");
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 app.use(
   cors({
     origin: ["http://192.168.0.100:3000", "http://localhost:8080"],
