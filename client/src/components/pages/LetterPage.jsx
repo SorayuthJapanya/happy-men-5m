@@ -28,7 +28,7 @@ const LetterPage = () => {
           className="relative w-48 h-36 sm:w-64 sm:h-48 md:w-96 md:h-64 lg:w-112 lg:h-80 bg-pink-400 cursor-pointer transform hover:scale-105 transition-transform duration-300 "
         >
           <div className="absolute top-0 left-0 w-full h-full bg-pink-500 clip-envelope-front z-10"></div>
-          <p className="absolute top-13 left-20 sm:left-29 sm:top-19 md:top-27 md:left-45 lg:top-32 lg:left-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl z-100 ">❤</p>
+          <p className="absolute top-13 left-20 sm:left-29 sm:top-19 md:top-27 md:left-45 lg:top-32 lg:left-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl z-100 ">{"💝"}</p>
         </div>
       ) : (
         // Opened Letter with Animation
