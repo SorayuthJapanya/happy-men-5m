@@ -17,7 +17,7 @@ app.use(
 app.use(express.json());
 
 app.use("/api/v1/users", userRoutes);
-app.use("/lock", unlockHeartRoutes);
+app.use("/api/v1/lock", unlockHeartRoutes);
 
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
